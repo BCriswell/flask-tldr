@@ -1,0 +1,10 @@
+<ul class="summary-list">
+  {% for summary in summary_list %}
+    <li class="">
+      <div class="">
+        <h4><a href="{{ url_for('summarize.summary_detail', summary_id=summary.id) }}">{{ summary.url }}</a></h4>
+        <p>{{ summary.summary }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

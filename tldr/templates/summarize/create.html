@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h4>Submit the full source URL for the post:</h4>
+  <form action="/summarize/create" method="post">
+    {{ summary_form.csrf_token }}
+    {{ summary_form.url }}
+    {{ summary_form.submit }}
+  </form>
+{% endblock %}
